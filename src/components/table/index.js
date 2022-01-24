@@ -93,7 +93,7 @@ function Tabela({ fruits, addItemCart }) {
                     </StyledTableCell>
                     <StyledTableCell align="center">
                       R{"$"}
-                      {item.id},00
+                      {(item.id / 4).toFixed(2)}
                     </StyledTableCell>
                     <StyledTableCell align="center">
                       <Button

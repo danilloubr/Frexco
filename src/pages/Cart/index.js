@@ -134,11 +134,12 @@ function Cart({
           <div className="total-compras">
             <span>
               TOTAL: R${" "}
-              {cart.reduce(
-                (acc, current) => acc + current.id * current.amount,
-                0
-              )}
-              ,00
+              {cart
+                .reduce(
+                  (acc, current) => acc + (current.id * current.amount) / 4,
+                  0
+                )
+                .toFixed(2)}
             </span>
             <Button variant="contained" onClick={() => history.push("/")}>
               {" "}
