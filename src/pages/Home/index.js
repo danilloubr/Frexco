@@ -46,10 +46,6 @@ function Home() {
       setCart([...cart, { ...product, amount: 1 }]);
     }
     toast.success("Item adicionado com sucesso!");
-    console.log("AMOUNT", product.amount);
-    console.log("PRODUCT", product);
-    console.log("PRODUTOEXISTE", ProductExist);
-    console.log("CARTDENTRO", cart);
   };
 
   const removeItemCart = (product) => {
@@ -78,14 +74,12 @@ function Home() {
     toast.success("Obrigado por comprar com a gente! Volte sempte.");
   };
 
-  console.log("CARTFORA", cart);
-
   localStorage.setItem("COMPRAS", JSON.stringify(cart));
   if (!fruits) return null;
 
   return (
     <>
-      <footer> TODOS OS DIREITOS RESERVADOS</footer>
+      <footer>TODOS OS DIREITOS RESERVADOS</footer>
 
       <Router>
         <ToastContainer />

@@ -15,7 +15,6 @@ import Paper from "@mui/material/Paper";
 import "./table.css";
 
 function Tabela({ fruits, addItemCart }) {
-  console.log("FRUTAS TABELA", fruits);
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
       backgroundColor: "white",
