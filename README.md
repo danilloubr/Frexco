@@ -25,6 +25,12 @@ Solicitações de pull são bem-vindas. Para grandes mudanças, abra um problema
 
 Certifique-se de atualizar os testes conforme apropriado.
 
+## Aplicação
+
+O projeto foi colocado em produção utilizando o Vercel:
+
+LINK: https://alimentosfrexco.vercel.app/
+
 ## License
 
 [MIT](https://linkedin.com/in/danilloubr)
