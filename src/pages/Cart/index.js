@@ -77,6 +77,9 @@ function Cart({
                   <StyledTableCell align="center">
                     <b>Nome</b>
                   </StyledTableCell>
+                  <StyledTableCell align="center">
+                    <b>Preço/UND.</b>
+                  </StyledTableCell>
                   <StyledTableCell align="right">
                     <b>Quantidade</b>
                   </StyledTableCell>
@@ -91,6 +94,13 @@ function Cart({
                           scope="row"
                         >
                           {item.name}
+                        </StyledTableCell>
+                        <StyledTableCell
+                          style={{ fontSize: "20px", fontStyle: "bold" }}
+                          align="center"
+                        >
+                          R{"$"}
+                          {(item.id / 4).toFixed(2)}
                         </StyledTableCell>
                         <StyledTableCell
                           align="center"
