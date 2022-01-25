@@ -80,6 +80,13 @@ function Tabela({ fruits, addItemCart }) {
                         scope="row"
                       >
                         {item.name}
+                        <Button
+                          size="small"
+                          color="success"
+                          onClick={() => addItemCart(item)}
+                        >
+                          +
+                        </Button>
                       </StyledTableCell>
                       <StyledTableCell align="center">
                         {item.nutritions.carbohydrates}g
