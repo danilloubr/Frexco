@@ -45,71 +45,119 @@ function Tabela({ fruits, addItemCart }) {
       <section className="pagina-total">
         <div className="container2">
           <h2>FAÇA SUAS COMPRAS</h2>
-          <TableContainer component={Paper}>
-            <Table sx={{ textAlign: "center" }} aria-label="customized table">
-              <TableBody>
-                <StyledTableCell align="center">
-                  <b>Nome</b>
-                </StyledTableCell>
-                <StyledTableCell align="center">
-                  <b>Carboidratos</b>
-                </StyledTableCell>
-                <StyledTableCell align="center">
-                  <b>Proteínas</b>
-                </StyledTableCell>
-                <StyledTableCell align="center">
-                  <b>Gorduras Totais</b>
-                </StyledTableCell>
-                <StyledTableCell align="center">
-                  <b>Calorias</b>
-                </StyledTableCell>
-                <StyledTableCell align="center">
-                  <b>Açúcar</b>
-                </StyledTableCell>
-                <StyledTableCell align="center">
-                  <b>Valor</b>
-                </StyledTableCell>
-                <StyledTableCell align="center"></StyledTableCell>
+          <div className="tabela-web">
+            <TableContainer component={Paper}>
+              <Table sx={{ textAlign: "center" }} aria-label="customized table">
+                <TableBody>
+                  <StyledTableCell align="center">
+                    <b>Nome</b>
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    <b>Carboidratos</b>
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    <b>Proteínas</b>
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    <b>Gorduras Totais</b>
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    <b>Calorias</b>
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    <b>Açúcar</b>
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    <b>Valor</b>
+                  </StyledTableCell>
+                  <StyledTableCell align="center"></StyledTableCell>
 
-                {fruits.map((item) => (
-                  <StyledTableRow key={item.id}>
-                    <StyledTableCell component="th" align="center" scope="row">
-                      {item.name}
-                    </StyledTableCell>
-                    <StyledTableCell align="center">
-                      {item.nutritions.carbohydrates}g
-                    </StyledTableCell>
-                    <StyledTableCell align="center">
-                      {item.nutritions.protein}g
-                    </StyledTableCell>
-                    <StyledTableCell align="center">
-                      {item.nutritions.fat}g
-                    </StyledTableCell>
-                    <StyledTableCell align="center">
-                      {item.nutritions.calories} kcal
-                    </StyledTableCell>
-                    <StyledTableCell align="center">
-                      {item.nutritions.sugar}g
-                    </StyledTableCell>
-                    <StyledTableCell align="center">
-                      R{"$"}
-                      {(item.id / 4).toFixed(2)}
-                    </StyledTableCell>
-                    <StyledTableCell align="center">
-                      <Button
-                        size="small"
-                        variant="contained"
-                        color="success"
-                        onClick={() => addItemCart(item)}
+                  {fruits.map((item) => (
+                    <StyledTableRow key={item.id}>
+                      <StyledTableCell
+                        component="th"
+                        align="center"
+                        scope="row"
                       >
-                        Adicionar
-                      </Button>
-                    </StyledTableCell>
-                  </StyledTableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
+                        {item.name}
+                      </StyledTableCell>
+                      <StyledTableCell align="center">
+                        {item.nutritions.carbohydrates}g
+                      </StyledTableCell>
+                      <StyledTableCell align="center">
+                        {item.nutritions.protein}g
+                      </StyledTableCell>
+                      <StyledTableCell align="center">
+                        {item.nutritions.fat}g
+                      </StyledTableCell>
+                      <StyledTableCell align="center">
+                        {item.nutritions.calories} kcal
+                      </StyledTableCell>
+                      <StyledTableCell align="center">
+                        {item.nutritions.sugar}g
+                      </StyledTableCell>
+                      <StyledTableCell align="center">
+                        R{"$"}
+                        {(item.id / 4).toFixed(2)}
+                      </StyledTableCell>
+                      <StyledTableCell align="center">
+                        <Button
+                          size="small"
+                          variant="contained"
+                          color="success"
+                          onClick={() => addItemCart(item)}
+                        >
+                          Adicionar
+                        </Button>
+                      </StyledTableCell>
+                    </StyledTableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </div>
+          <div className="tabela-mobile">
+            <TableContainer component={Paper}>
+              <Table sx={{ textAlign: "center" }} aria-label="customized table">
+                <TableBody>
+                  <StyledTableCell align="center">
+                    <b>Nome</b>
+                  </StyledTableCell>
+
+                  <StyledTableCell align="center">
+                    <b>Valor</b>
+                  </StyledTableCell>
+                  <StyledTableCell align="center"></StyledTableCell>
+
+                  {fruits.map((item) => (
+                    <StyledTableRow key={item.id}>
+                      <StyledTableCell
+                        component="th"
+                        align="center"
+                        scope="row"
+                      >
+                        {item.name}
+                      </StyledTableCell>
+                      <StyledTableCell align="center">
+                        R{"$"}
+                        {(item.id / 4).toFixed(2)}
+                      </StyledTableCell>
+                      <StyledTableCell align="center">
+                        <Button
+                          size="small"
+                          variant="contained"
+                          color="success"
+                          onClick={() => addItemCart(item)}
+                        >
+                          Adicionar
+                        </Button>
+                      </StyledTableCell>
+                    </StyledTableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </div>
           <h2>HOJE NÓS TEMOS {fruits.length} TIPOS DE FRUTAS</h2>
         </div>
       </section>

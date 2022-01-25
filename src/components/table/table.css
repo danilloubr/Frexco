@@ -57,6 +57,51 @@
   cursor: pointer;
 }
 
-.pagina-total-mobile {
-  display: none;
+@media (max-width: 760px) {
+  .tabela-web {
+    display: none;
+  }
+
+  .tabela-mobile {
+    display: flex;
+  }
+
+  .pagina-total {
+    display: flex;
+    padding: 10px;
+    margin: 150px 30px 30px 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+  }
+
+  .container2 h2 {
+    background: #89be22;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px 2px rgba(0, 0, 0, 0.25);
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0;
+    padding: 0 50px;
+  }
+
+  nav img {
+    width: 150px;
+  }
+
+  table td {
+    padding: 2px !important;
+  }
 }
