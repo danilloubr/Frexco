@@ -16,7 +16,7 @@ function Home() {
     const fetchData = async () => {
       try {
         const { data: resp } = await axios.get(
-          `http://www.fruityvice.com/api/fruit/all`,
+          `https://cors-anywhere.herokuapp.com/http://www.fruityvice.com/api/fruit/all`,
           { headers: { "Access-Control-Allow-Origin": "*" } }
         );
 
