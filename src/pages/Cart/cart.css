@@ -1,9 +1,9 @@
 .pagina-total {
   display: flex;
-  flex-direction: column;
-
-  padding: 100px;
-  margin-top: 70px;
+  margin-top: 150px;
+  align-items: stretch;
+  justify-content: center;
+  align-content: center;
 }
 
 .container1 {
@@ -131,5 +131,13 @@
 
   nav img {
     width: 150px;
+  }
+
+  .pagina-total {
+    display: flex;
+    margin-top: 150px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
   }
 }

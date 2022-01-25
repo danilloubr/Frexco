@@ -81,7 +81,17 @@ function Home() {
       <footer>TODOS OS DIREITOS RESERVADOS</footer>
 
       <Router>
-        <ToastContainer />
+        <ToastContainer
+          position="top-center"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
         <Navbar />
         <Switch>
           <Route exact path="/cart/">
